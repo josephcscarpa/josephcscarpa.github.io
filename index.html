@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joey Scarpa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        /* Section animations with larger delays */
+        .animate-header {
+            opacity: 0;
+            animation: fadeInLeft 0.8s ease-out forwards;
+            animation-delay: 0.2s;
+        }
+        
+        .animate-about {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out forwards;
+            animation-delay: 0.8s;
+        }
+        
+        .animate-about-content {
+            opacity: 0;
+            animation: fadeInUp 0.6s ease-out forwards;
+            animation-delay: 1.2s;
+        }
+        
+        .animate-contact {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out forwards;
+            animation-delay: 3.2s;
+        }
+        
+        .animate-contact-links {
+            opacity: 0;
+            animation: fadeInUp 0.6s ease-out forwards;
+            animation-delay: 3.6s;
+        }
+        
+        /* Timeline animations with faster, tighter timing */
+        .timeline-item {
+            opacity: 0;
+            animation: fadeInUp 0.5s ease-out forwards;
+        }
+        
+        .timeline-item:nth-child(1) { animation-delay: 1.8s; }
+        .timeline-item:nth-child(2) { animation-delay: 2.0s; }
+        .timeline-item:nth-child(3) { animation-delay: 2.2s; }
+        .timeline-item:nth-child(4) { animation-delay: 2.4s; }
+        .timeline-item:nth-child(5) { animation-delay: 2.6s; }
+        
+        .social-link {
+            transition: all 0.3s ease;
+        }
+        
+        .social-link:hover {
+            transform: translateY(-2px);
+        }
+        
+        body {
+            font-family: 'IBM Plex Sans', sans-serif;
+            background-color: #fafafa;
+        }
+        
+        .header-font {
+            font-family: 'IBM Plex Sans', sans-serif;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen text-gray-800">
+    <div class="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-2xl mx-auto">
+            <!-- Header -->
+            <header class="mb-16">
+                <h1 class="text-4xl sm:text-5xl header-font text-gray-900 mb-2 animate-header">Joseph C. Scarpa (Joey)</h1>
+            </header>
+            
+            <!-- About Section -->
+            <section class="mb-16">
+                
+                <div class="space-y-4 text-gray-700 leading-relaxed animate-about-content">
+                    <p>Software engineer at Meta Based in the Bay Area, with roots in NY. Currently working on Meta Verified (the blue checkmark subscription used by your favorite creators). I identify and resolve user churn problems (cancellations, payment failures, and side-effects from interactions with other Meta products) and work on product-side payment reliability.</p>
+                    <p>I'm always interested in learning more from others who are solving similar problems (eng, PM, design) — let's connect on <a href="#" class="text-blue-600 hover:text-blue-800 underline">LinkedIn</a>.</p>
+                </div>
+            </section>
+            
+            <!-- Timeline Section -->
+            <section class="mb-16">
+                <div class="space-y-6">
+                    <div class="timeline-item flex items-start space-x-4">
+                        <div class="flex-shrink-0 w-16 text-sm font-medium text-gray-600 pt-1">2023</div>
+                        <div class="flex-1">
+                            <p class="text-gray-700">Researcher in Rudin Interpretability Lab - <a href="#" class="text-blue-600 hover:text-blue-800 underline">Paper</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item flex items-start space-x-4">
+                        <div class="flex-shrink-0 w-16 text-sm font-medium text-gray-600 pt-1">2024</div>
+                        <div class="flex-1">
+                            <p class="text-gray-700">Graduated from Duke with majors in computer science and music</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item flex items-start space-x-4">
+                        <div class="flex-shrink-0 w-16 text-sm font-medium text-gray-600 pt-1">2024</div>
+                        <div class="flex-1">
+                            <p class="text-gray-700">Started at Meta (SWE)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item flex items-start space-x-4">
+                        <div class="flex-shrink-0 w-16 text-sm font-medium text-gray-600 pt-1">2024</div>
+                        <div class="flex-1">
+                            <p class="text-gray-700">Migrated our cross-app data layer, ensuring compliance with DMA.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item flex items-start space-x-4">
+                        <div class="flex-shrink-0 w-16 text-sm font-medium text-gray-600 pt-1">2025</div>
+                        <div class="flex-1">
+                            <p class="text-gray-700">Recaptured 800k+ ARR through bug fixes (and counting).</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Contact Section -->
+            <section>
+                <h2 class="text-2xl header-font text-gray-800 mb-6 animate-contact">Contact</h2>
+                <div class="flex space-x-6 animate-contact-links">
+                    <a href="https://github.com/josephcscarpa" class="social-link text-gray-700 hover:text-gray-900 font-medium">github</a>
+                    <a href="https://www.linkedin.com/in/joseph-c-scarpa/" class="social-link text-gray-700 hover:text-gray-900 font-medium">linkedin</a>
+                </div>
+            </section>
+            
+            <!-- Footer -->
+            <footer class="mt-16 pt-8 border-t border-gray-300 text-center">
+                <p class="text-sm text-gray-600">© 2025 Joey Scarpa</p>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
